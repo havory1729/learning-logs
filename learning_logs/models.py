@@ -1,0 +1,23 @@
+from django.contrib.auth.models import User
+from django.db import models
+
+
+class Topic(models.Model):
+    owner = models.ForeignKey(User, on_delete=models.CASCADE)
+    text = models.CharField(max_length=200)
+    date_added = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self) -> str:
+        return self.text
+
+
+class Entries(models.Model):
+    topic = models.ForeignKey(Topic, on_delete=models.CASCADE)
+    text = models.TextField()
+    date_added = models.DateTimeField(max_length=200)
+
+    class Meta:
+        verbose_name_plural = "entries"
+
+    def __str__(self) -> str:
+        return self.text[:50] + "..."
