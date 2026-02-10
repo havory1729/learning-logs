@@ -1,3 +1,12 @@
+# custom stuff
+learning_log/
+__pycache__/
+*.sqlite3
+pyproject-toml-bash
+pyproject.toml
+env-bash.sh
+
+# Boilerplate
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
