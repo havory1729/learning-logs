@@ -7,14 +7,14 @@ app_name = "learning_logs"
 urlpatterns = [
     # Render homepage
     path("", views.index, name="index"),
-    # Render topics
+    # Render topics, page
     path("topics", views.topics, name="topics"),
-    # Render topic entries
-    path("topics/<int:topic_id>", views.topic, name="topic"),
-    # Render new topic form
+    # Render a topic, page
+    path("topics/<int:topic_id>/", views.topic, name="topic"),
+    # enter a new topic
     path("new_topic/", views.new_topic, name="new_topic"),
-    # Render new entry
-    path("new_entry/<int:topic_id>/", views.new_enetry, name="new_entry"),
-    # Render edit entry
+    # enter a new entry
+    path("new_entry/<int:topic_id>/", views.new_entry, name="new_entry"),
+    # edit and entry
     path("edit_entry/<int:entry_id>/", views.edit_entry, name="edit_entry"),
 ]

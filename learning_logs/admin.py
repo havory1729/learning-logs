@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Entries, Topic
+from .models import Entry, Topic
 
 admin.site.register(Topic)
-admin.site.register(Entries)
+admin.site.register(Entry)

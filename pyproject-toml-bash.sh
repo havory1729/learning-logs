@@ -1,0 +1,12 @@
+
+cat << EOF > pyproject.toml
+# pyrpoject.toml
+
+[tool.mypy]
+plugins = "mypy_django_plugin.main"
+mypy_path = "./venv/bin/"
+
+[tool.django-stubs]
+django_settings_module = "django.settings"
+ignore_missing_model_attributes = true
+EOF
